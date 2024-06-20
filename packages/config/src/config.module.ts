@@ -4,7 +4,7 @@ import {
   type ConfigModuleOptions as NestConfigModuleOptions,
 } from '@nestjs/config';
 
-import { configuration } from './configuration';
+import { parseConfig } from './configuration';
 
 export interface ConfigModuleOptions extends NestConfigModuleOptions {
   filepath: string | string[];
@@ -18,7 +18,7 @@ export class ConfigModule {
     return NestConfigModule.forRoot({
       isGlobal: true,
       ...rest,
-      load: [configuration(filepath)],
+      load: [parseConfig(filepath)],
     });
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@nest-let/config",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "nestjs yaml config",
   "scripts": {
     "build": "npm run clean && tsc -p ./tsconfig.json",

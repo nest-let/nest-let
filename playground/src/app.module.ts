@@ -8,8 +8,8 @@ import { AppController } from './app.controller';
   imports: [
     ConfigModule.forRootAsync({
       filepath: [
-        resolve(__dirname, `config`, `config.yml`),
-        resolve(__dirname, `config`, `config.${process.env.NODE_ENV}.yml`),
+        resolve(__dirname, `config`, `config.yaml`),
+        resolve(__dirname, `config`, `config.${process.env.NODE_ENV}.yaml`),
       ],
     }),
   ],

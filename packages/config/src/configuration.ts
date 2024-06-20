@@ -2,11 +2,11 @@ import merge from 'deepmerge';
 import { promises } from 'fs';
 import * as yaml from 'js-yaml';
 
-const parseYaml = async (filepath: string) => {
+export const parseYaml = async (filepath: string) => {
   return yaml.load(await promises.readFile(filepath, 'utf-8')) || {};
 };
 
-export const configuration = (filepath: string | string[]) => {
+export const parseConfig = (filepath: string | string[]) => {
   return async () => {
     if (typeof filepath === 'string') {
       filepath = [filepath];

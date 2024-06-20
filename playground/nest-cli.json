@@ -4,8 +4,6 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "deleteOutDir": true,
-    "assets": [
-      "**/*.yml"
-    ]
+    "assets": [{ "include": "../config/*.yaml", "outDir": "./dist/config" }]
   }
 }

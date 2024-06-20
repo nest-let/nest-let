@@ -10,9 +10,9 @@ npm install @nest-let/config @nestjs/config
 
 2. 新建 `src/config` 配置目录
 
-- `src/config/config.yml`
-- `src/config/config.dev.yml`
-- `src/config/config.prod.yml`
+- `src/config/config.yaml`
+- `src/config/config.dev.yaml`
+- `src/config/config.prod.yaml`
 
 3. 使用
 
@@ -22,8 +22,8 @@ npm install @nest-let/config @nestjs/config
   imports: [
     ConfigModule.forRootAsync({
       filepath: [
-        resolve(__dirname, `config`, `config.yml`),
-        resolve(__dirname, `config`, `config.${process.env.NODE_ENV}.yml`),
+        resolve(__dirname, `config`, `config.yaml`),
+        resolve(__dirname, `config`, `config.${process.env.NODE_ENV}.yaml`),
       ],
     }),
   ],
@@ -37,7 +37,7 @@ export class AppModule {}
 ```json
 {
   "compilerOptions": {
-    "assets": ["**/*.yml"]
+    "assets": ["**/*.yaml"]
   }
 }
 ```
