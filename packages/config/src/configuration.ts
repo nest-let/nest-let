@@ -6,7 +6,7 @@ const parseYaml = async (filepath: string) => {
   return yaml.load(await promises.readFile(filepath, 'utf-8')) || {};
 };
 
-export const parseConfig = (filepath: string | string[]) => {
+export const configuration = (filepath: string | string[]) => {
   return async () => {
     if (typeof filepath === 'string') {
       filepath = [filepath];

@@ -42,6 +42,21 @@ export class AppModule {}
 }
 ```
 
+**注意** ：如果 `config` 文件夹与 `src` 文件夹处于同一级别，则添加值为：
+
+```json
+// `nest-cli.json`
+{
+  "compilerOptions": {
+    "assets": [{ "include": "../config/*.yaml", "outDir": "./dist/config" }]
+  }
+}
+```
+
+[详情参考](https://docs.nestjs.com/techniques/configuration)
+
+[中文详情参考](https://nest.nodejs.cn/techniques/configuration)
+
 ## 配置覆盖顺序
 
 `filepath` 配置文件，后面的配置文件会覆盖前面的字段

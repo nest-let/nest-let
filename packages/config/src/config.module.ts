@@ -1,9 +1,12 @@
 import { type DynamicModule, Global, Module } from '@nestjs/common';
-import { ConfigModule as NestConfigModule } from '@nestjs/config';
+import {
+  ConfigModule as NestConfigModule,
+  type ConfigModuleOptions as NestConfigModuleOptions,
+} from '@nestjs/config';
 
-import { parseConfig } from './parse-config';
+import { configuration } from './configuration';
 
-export interface ConfigModuleOptions {
+export interface ConfigModuleOptions extends NestConfigModuleOptions {
   filepath: string | string[];
 }
 
@@ -11,9 +14,11 @@ export interface ConfigModuleOptions {
 @Module({})
 export class ConfigModule {
   public static forRootAsync(options: ConfigModuleOptions): DynamicModule {
+    const { filepath, ...rest } = options;
     return NestConfigModule.forRoot({
       isGlobal: true,
-      load: [parseConfig(options.filepath)],
+      ...rest,
+      load: [configuration(filepath)],
     });
   }
 }
