@@ -3,5 +3,5 @@
 ## usage
 
 ```sh
-npm install @nest-let/config
+npm install @nest-let/config @nestjs/config
 ```
