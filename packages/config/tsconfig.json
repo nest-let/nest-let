@@ -5,7 +5,7 @@
     "lib": ["ESNext"],
 
     /* Modules */
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
 
     /* JavaScript Support */
@@ -26,9 +26,6 @@
 
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-
-    // <https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/#verbatimmodulesyntax>
-    "verbatimModuleSyntax": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
