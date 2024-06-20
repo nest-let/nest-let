@@ -6,7 +6,7 @@
 
     /* Modules */
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Node",
 
     /* JavaScript Support */
     "allowJs": true,
@@ -23,6 +23,9 @@
 
     /* Completeness */
     "skipLibCheck": true,
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
 
     // <https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/#verbatimmodulesyntax>
     "verbatimModuleSyntax": true

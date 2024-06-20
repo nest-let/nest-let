@@ -5,10 +5,16 @@
   "packageManager": "pnpm@8.7.1",
   "scripts": {
     "dev": "pnpm -C ./playground dev",
+    "build": "npm run build:config",
+    "build:config": "pnpm -C ./packages/config build",
+    "release": "npm run release:config",
+    "release:config": "pnpm -C ./packages/config release",
+    "sync": "npm run sync:config",
+    "sync:config": "pnpm -C ./packages/config sync",
     "clean": "rimraf --glob **/node_modules",
     "format": "prettier --write \"packages/**/*\" \"playground/**/*\"",
-    "lint": "eslint \"{packages,playground}/**/*{.ts}\" --fix",
-    "preinstall1": "npx only-allow pnpm"
+    "lint": "eslint \"{packages,playground}/**/*.ts\" --fix",
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [
     "daysnap",

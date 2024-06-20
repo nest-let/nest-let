@@ -1,4 +1,3 @@
-import { isString } from '@daysnap/utils';
 import merge from 'deepmerge';
 import { promises } from 'fs';
 import * as yaml from 'js-yaml';
@@ -9,7 +8,7 @@ const parseYaml = async (filepath: string) => {
 
 export const parseConfig = (filepath: string | string[]) => {
   return async () => {
-    if (isString(filepath)) {
+    if (typeof filepath === 'string') {
       filepath = [filepath];
     }
 
