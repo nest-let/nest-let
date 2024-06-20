@@ -5,8 +5,7 @@
   "compilerOptions": {
     "deleteOutDir": true,
     "assets": [
-      "**/*.yml",
-      "**/*.hbs"
+      "**/*.yml"
     ]
   }
 }
