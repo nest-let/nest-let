@@ -28,15 +28,16 @@
   "homepage": "https://github.com/Woshiajuana/nest-let#readme",
   "license": "MIT",
   "dependencies": {
+    "deepmerge": "^4.3.1"
   },
   "peerDependencies": {
     "@nestjs/common": ">=10.0.0",
-    "@nestjs/config": ">=3.0.0"
+    "log4js": ">=6.0.0"
   },
   "devDependencies": {
     "@nestjs/common": "^10.0.0",
-    "@nestjs/config": "^3.2.0",
     "@types/node": "^20.3.1",
+    "log4js": "^6.9.1",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5"
   }
