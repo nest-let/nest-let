@@ -1,0 +1,42 @@
+{
+  "name": "@nest-let/common",
+  "version": "0.0.1",
+  "description": "nestjs common",
+  "scripts": {
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "clean": "rimraf ./dist",
+    "sync": "dsc sync",
+    "release": "npm run build && dsc publish --pnpm"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "daysnap",
+    "nestjs",
+    "nest",
+    "nest-let",
+    "common"
+  ],
+  "author": "woshiajuana",
+  "homepage": "https://github.com/Woshiajuana/nest-let#readme",
+  "license": "MIT",
+  "dependencies": {
+    "deepmerge": "^4.3.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@types/node": "^20.3.1",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  }
+}
